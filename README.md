@@ -1,10 +1,11 @@
 ## Fast Array Clone Library
 
-This library can **x200 times faster** ([benchmark](https://jsfiddle.net/volovikov/thcu7tjv/24/)) than *lodash* make deep copies of an array or objects with similar structure in JavaScript
+This library can **200X times faster** than *lodash* (<a href="https://jsfiddle.net/volovikov/thcu7tjv/24/" target="_blank">benchmark</a>) make deep copies of an array or objects with similar structure in JavaScript
 
 ### EXAMPLE
 ```javascript
-var sourceArray = [{ f1 : ..., f2: ... }, ...]; // array of SAME STRUCTURED object
+// array of SAME STRUCTURED object
+var sourceArray = [{ f1 : ..., f2: ... }, ...];
 ```
 
 You can use built-in array clone function:
@@ -13,7 +14,8 @@ var clonedArray = FastClone.cloneArray(sourceArray);
 ```
 or object clone constructor factory:
 ```javascript
-var Clone = FastClone.factory(sourceArray[0]); // creating deep clone constructor function
+// creating deep clone constructor function
+var Clone = FastClone.factory(sourceArray[0]);
 var clonedArray = sourceArray.map(function(item) {
     // you can add here custom logic
     return new Clone(item);
@@ -34,7 +36,7 @@ Library | Ops/sec
 lodash | 66,313
 JQuery | 62,164
 **FastClone** | **16,927,673**
-Benchmark source code - https://jsfiddle.net/volovikov/thcu7tjv/24/
+Benchmark source code - <a href="https://jsfiddle.net/volovikov/thcu7tjv/24/" target="_blank">benchmark</a>
 
 
 ### LICENSE
