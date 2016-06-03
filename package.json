@@ -1,6 +1,6 @@
 {
   "name": "fastest-clone",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for fastest array cloning or copy objects with similar structures",
   "main": "index.js",
   "directories": {
