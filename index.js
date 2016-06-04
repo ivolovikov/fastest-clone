@@ -52,11 +52,22 @@ var FastClone = {
         }
         var deep = isDeep === undefined ? true : isDeep;
 
-        var clonedArray = [];
+        var clonedArray;
         if (source.length) {
             var Clone = FastClone.factory(source[0], deep);
-            for (var i = 0; i < source.length; i++) {
-                clonedArray.push(new Clone(source[i]));
+
+            //https://jsfiddle.net/2z0f60aw/4/
+            if ( typeof InstallTrigger !== 'undefined' ){ //Firefox detection goes here
+                clonedArray = new Array(source.length);
+                for (var i = 0; i < source.length; i++) {
+                    clonedArray[i] = new Clone(source[i]);
+                }
+
+            } else {
+                clonedArray = [];
+                for (var i = 0; i < source.length; i++) {
+                    clonedArray.push(new Clone(source[i]));
+                }
             }
         }
         return clonedArray;
