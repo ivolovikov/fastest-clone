@@ -31,6 +31,7 @@ Using npm:
 npm install fastest-clone
 ```
 ### BENCHMARK
+Result for Chromium 50.0.2661.102 Ubuntu 14.04 (64-bit)
 Library | Ops/sec
 ------------ | -------------
 lodash | 66,313
