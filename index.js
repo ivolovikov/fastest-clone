@@ -55,7 +55,7 @@ var FastClone = {
         var clonedArray = [];
         if (source.length) {
             var Clone = FastClone.factory(source[0], deep);
-            for (var i = 0; i < source.length; i++) {
+            for (var i = 0, l = source.length; i < l; i++) {
                 clonedArray.push(new Clone(source[i]));
             }
         }
