@@ -103,7 +103,7 @@ var FastClone = {
                 var value = source[key];
                 var path = base + '.' + key; // current key path
 
-                if (deep && typeof value == 'object') {
+                if (deep && typeof value == 'object' && value !== null) {
                     keysMap += FastClone._getKeyMap(value, deep, path, index);
                 } else {
                     keysMap += 'this' + path + ' = src' + path + ';';
